@@ -19,5 +19,10 @@ agent any
      archiveArtifacts artifacts: 'output/*.txt', excludes: 'output/*.md'
      }
    }
+   stage('Archive build output') {
+    steps {
+    input 'Check Syntax in Pipeline'
+    }
   }
+ }
 }
